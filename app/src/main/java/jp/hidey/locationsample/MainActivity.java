@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    @NeedsPermission({Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION})
+    @NeedsPermission({Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION})
     public void fetchLocation() {
         LocationManager mgr = (LocationManager) getSystemService(Activity.LOCATION_SERVICE);
         mgr.getLastKnownLocation(LocationManager.GPS_PROVIDER);
