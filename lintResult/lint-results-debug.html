@@ -18,7 +18,7 @@ document.getElementById(id+'Link').style.display = 'none';
 <body>
 <h1>Lint Report</h1>
 <div class="titleSeparator"></div>
-Check performed at Thu Mar 31 01:09:00 JST 2016.<br/>
+Check performed at Thu Mar 31 01:17:53 JST 2016.<br/>
 1 errors and 2 warnings found:<br/><br/>
 <table class="overview">
 <tr><td></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
@@ -51,7 +51,7 @@ Check performed at Thu Mar 31 01:09:00 JST 2016.<br/>
 </div>
 <div class="warningslist">
 <span class="location"><a href="../../src/main/java/jp/hidey/locationsample/MainActivity.java">../../src/main/java/jp/hidey/locationsample/MainActivity.java</a>:27</span>: <span class="message">Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with <code>checkPermission</code>) or explicitly handle a potential <code>SecurityException</code></span><br /><pre class="errorlines">
-<span class="lineno">  24</span>     @NeedsPermission({Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION})
+<span class="lineno">  24</span>     @NeedsPermission({Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION})
 <span class="lineno">  25</span>     public void fetchLocation() {
 <span class="lineno">  26</span>         LocationManager mgr = (LocationManager) getSystemService(Activity.LOCATION_SERVICE);
 <span class="lineno">  27</span>         <span class="errorspan">mgr.getLastKnownLocation(LocationManager.GPS_PROVIDER);</span>
